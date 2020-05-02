@@ -1,5 +1,5 @@
 ## Baba-OAuth
-#### Web Services
+#### Web Services // 120 points
 
 ### Description
 It was reported that an intern managed to use a discount coupon from the intern's boss. The discount coupon feature is implemented with OAuth. The intern only had his own credentials and the username of his boss. You will be using Baba's Oauth web application for this challenge. Connect to http://p7ju6oidw6ayykt9zeglwyxired60yct.ctf.sg:2416 to try it out. 
@@ -27,15 +27,25 @@ Y29tLmN5YmVydGhvbi5CQDBUQDAtZGkkYzB1bnQ=
 * The scopes are encoded such that it is safe to use in the URL.
 
 ### Solution
-Opening up the link gave us a simple login page, and all we needed to do is to key in the provided intern username and password. 
+Opening up the link gave us a simple login page, and all we needed to do is to key in the provided intern username and password.  
 
-On successful login, we reach the page where they ask us to enter the authorization code and scope. However, we know that the authorization code generated belongs to the intern and not the boss, therefore there must be something to change to gain access to the boss's account.
+![Login Page](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/baba-oauth/image-1.png)
 
-With close inspection to the URL, we notice that at the end there is a `username=intern%40baba.com`. We know that `%40` is the url encoded representation for the `@` sign and thus it is the username of the account.
+On successful login, we reach the page where they ask us to enter the authorization code and scope. However, we know that the authorization code generated belongs to the intern and not the boss, therefore there must be something to change to gain access to the boss's account. 
+
+![Enter authorization and scope](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/baba-oauth/image-2.png)  
+
+With close inspection to the URL, we notice that at the end there is a `username=intern%40baba.com`. We know that `%40` is the url encoded representation for the `@` sign and thus it is the username of the account.  
+
+![Suspicious URL](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/baba-oauth/image-3.png)
 
 Changing that to `internBoss%40baba.com`, we get a new authorization token to use. Putting in the first scope (well no harm trying every one of them) and the code we get to a new access page.
 
+![Access token page](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/baba-oauth/image-4.png)
+
 The access page just needs us to copy the token, and which we do, leading us to the discounts page. However, there is not a discount as the scope provided has no discount.
+
+![Wrong scope](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/baba-oauth/image-5.png)
 
 So after trial and error by trying all the scopes, we finally found the one that works and obtain our flag.
 
