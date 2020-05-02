@@ -8,7 +8,7 @@ Bob rushed out the site for ShoppingBaba's big Star Wars merchandise  sale so th
 
 The description hints strongly at some kind of local file inclusion exploit (see CSCG LFI). Go look for somewhere with a file path:
 
-![Filepath Cookie](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/yoda/cookie.txt)
+![Filepath Cookie](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/web_services/yoda/cookie.png)
 
 Ah, this cookie has a file path: `%2Fbabyyoda_old_method.jpg`. `%2F` is `/` in URL encoding. However, it points at the wrong place. Let's try adding a `../` _(cookie is `%2F..%2Fbabyyoda_old_method.jpg`)_:
 
