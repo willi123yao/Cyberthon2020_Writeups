@@ -43,22 +43,23 @@ let iv = "37ba7e8d277a79a3ae04fd9a4af669dd";
 
 const pmap = new Map();
 
+// Create a map of the orderID to the hex data of the order
 packets.forEach(packet => {
   const info = packet._source.layers.http;
   const data = packet._source.layers.data;
 
   const idraw = info[Object.keys(info)[0]]['http.request.uri'].slice('/myorders.php?orderID='.length);
-  const id = parseInt(idraw, 10);
+  const id = parseInt(idraw, 10); // Strip leading 0s
   
   pmap.set(id, data['data.data'].replace(/:/g, ''));
 });
 
+// Process and follow every order 
 for (let i=1; i<LEN; i++) {
   const data = pmap.get(curr);
   const decipher = crypto.createDecipheriv('aes-128-cbc', Buffer.from(key, 'hex'), Buffer.from(iv, 'hex'));
   let dec = decipher.update(data, 'hex', 'ascii');
   dec += decipher.final('ascii');
-
   dec = dec.toString();
 
   const tokens = dec.split(';');
@@ -66,7 +67,7 @@ for (let i=1; i<LEN; i++) {
     const p = t.split(':');
     if (p[0] == 'Message') console.log(t);
     else if (p[0] == "Next-ID") {
-      curr = parseInt(p[1], 10);
+      curr = parseInt(p[1], 10); // Set next ID and strip leading 0s
     }
     else if (p[0] == " Key") {
       key = p[1];
