@@ -16,7 +16,13 @@ Anddd yup, dumping it into cyberchef gave the result:
 
 ![1](1.jpg)
 
-## 
+Looking through the text and grepping for the flag, we get:
+
+```
+Cyberthon{th1s-i5-4-S1mpl3-Ciph3r-4lg0rithm}
+```
+
+
 
 ### Takeaways:
 
