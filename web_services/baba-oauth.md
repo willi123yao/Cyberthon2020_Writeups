@@ -12,7 +12,17 @@ Intern's credentials: - username = intern@baba.com - password = internP@ssw0rd12
 
 Boss's credentials: - username = internBoss@baba.com 
 
-List of all the scopes that the OAuth server accepts: Y29tLmN5YmVydGhvbi5MQHpAbUAtZGkkYzB1bnQ= Y29tLmN5YmVydGhvbi5ENkB5LWRpJGMwdW50 Y29tLmN5YmVydGhvbi5QMDA5LWRpJGMwdW50 Y29tLmN5YmVydGhvbi5CQDEwckAtZGkkYzB1bnQ= Y29tLmN5YmVydGhvbi5CQGJALWRpJGMwdW50 Y29tLmN5YmVydGhvbi5DQHIwdTZ1eS1kaSRjMHVudA== Y29tLmN5YmVydGhvbi5CMXUzbUBydC1kaSRjMHVudA== Y29tLmN5YmVydGhvbi5EaTVoMG4zNXRiMzMtZGkkYzB1bnQ= Y29tLmN5YmVydGhvbi5BMWloQGhALWRpJGMwdW50 Y29tLmN5YmVydGhvbi5CQDBUQDAtZGkkYzB1bnQ= 
+List of all the scopes that the OAuth server accepts:  
+Y29tLmN5YmVydGhvbi5MQHpAbUAtZGkkYzB1bnQ=  
+Y29tLmN5YmVydGhvbi5ENkB5LWRpJGMwdW50  
+Y29tLmN5YmVydGhvbi5QMDA5LWRpJGMwdW50  
+Y29tLmN5YmVydGhvbi5CQDEwckAtZGkkYzB1bnQ=  
+Y29tLmN5YmVydGhvbi5CQGJALWRpJGMwdW50  
+Y29tLmN5YmVydGhvbi5DQHIwdTZ1eS1kaSRjMHVudA==  
+Y29tLmN5YmVydGhvbi5CMXUzbUBydC1kaSRjMHVudA==  
+Y29tLmN5YmVydGhvbi5EaTVoMG4zNXRiMzMtZGkkYzB1bnQ=  
+Y29tLmN5YmVydGhvbi5BMWloQGhALWRpJGMwdW50  
+Y29tLmN5YmVydGhvbi5CQDBUQDAtZGkkYzB1bnQ= 
 
 * The scopes are encoded such that it is safe to use in the URL.
 
