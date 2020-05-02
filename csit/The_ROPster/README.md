@@ -2,7 +2,7 @@
 
 ##### The ROPster [1500]
 
-You have found an artefact left behind by the attacker. Now is your chance to RE the executable. Only those who exploit it successfully will obtain the hidden flag.
+_You have found an artefact left behind by the attacker. Now is your chance to RE the executable. Only those who exploit it successfully will obtain the hidden flag._
 
 `nc 128.199.181.212 8123`
 
@@ -10,7 +10,7 @@ Files: `Ropster.exe`
 
 #### Poking around
 
-`The ROPSter`, is naturally a Return-Oriented-Programming challenge by it's name. ROP is something I've tackled often in linux, but never have I done one with an `.exe`.
+As it's namesake, `The ROPSter` is a Return-Oriented-Programming pwn challenge. ROP is something I've tackled often in linux, but it's rare to see one involving an `.exe`.
 
 Regardless, every binary exploitation challenge starts with 3 simple things:
 
@@ -60,16 +60,19 @@ We'll get the flag printed immediately.
 
 ![image-20200502185540288](image-20200502185540288.png)
 
+Incidentally, this makes the challenge a simple `ret2text`, rather than a full-blown exercise in ROP. Perhaps an unintended solution?
+
 #### Flag
 
 `Cyberthon{SuChaGr34tROPster}`
 
 #### Code
 
+This payload will not work for `argv` input.^2^
+
 ```python
 from pwn import *
 payload = 'A'*0x80 + p32(0x13371337) + p32(0x4040707D)
-#This payload will not work locally.
 r = remote('128.199.181.212', 8123)
 r.sendline(payload)
 r.interactive()
@@ -78,3 +81,4 @@ r.interactive()
 #### Footnotes
 
 1. Naturally, `argv` isn't accessible server-side. Presumably, the `stdin` of the server is getting piped as an argument.
+2. Presumably, something in windows is messing with attempts to run the exploit on `Ropster.exe` locally.
