@@ -14,7 +14,7 @@ However, xfor reminded me of "xor", and the numerous challenges of xor "encrypte
 
 Anddd yup, dumping it into cyberchef gave the result:
 
-![1](C:\Users\Tkaixiang\Documents\GitHub\Cyberthon2020_Writeups\operating systems\Simple Cipher\1.jpg)
+![1](1.jpg)
 
 ## 
 
