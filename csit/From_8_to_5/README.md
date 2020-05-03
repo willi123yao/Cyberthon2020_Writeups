@@ -1,6 +1,6 @@
 # Cyberthon: CSIT
 
-# NOTE: Alternative writeup (by CSIT) can be found [here](From_8_to_5_Part_2.md)!
+# NOTE: Alternative writeup (by CSIT) for part 2 can be found [here](From_8_to_5_Part_2.md)!
 
 ## From 8 to 5 [1800]
 
