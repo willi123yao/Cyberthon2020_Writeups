@@ -13,7 +13,7 @@ Written by: hci-1
 * [x] Treasure Hunt
 * [x] Simple Cipher
 * [ ] Find The Answers
-* [ ] Meow
+* [ ] Meow (done by HCI_Zheng Jun)
 * [ ] Reverse(Faze)
 
 ### Web Services
@@ -25,14 +25,14 @@ Written by: hci-1
 
 ### CSIT
 * [ ] Lost Magic
-* [ ] Heart Paint
+* [ ] Heart Paint [done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#heart-paint)
 * [x] The ROPster
-* [ ] Unravelling DGA
+* [ ] Unravelling DGA (done by 000verflow)
 * [x] From 8 to 5
 * [x] What You See is Not all That Exists
 
 ### Data Science
-* [ ] Find The Hacker ID
-* [ ] My New Language
-* [ ] Spot The Malicious Users
+* [ ] Find The Hacker ID [done by EJC_RichardDominick](https://github.com/RichDom2185/Cyberthon-2020/blob/master/Data%20Science/FindTheHackerID.ipynb)
+* [ ] My New Language [NYJC_Terence](https://github.com/Hackin7/Programming-Crappy-Solutions/tree/master/Cyber%20Security/Cyberthon%202020/Finals/Data%20Science/My%20New%20Language)
+* [ ] Spot The Malicious Users [done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#spot-the-malicious-users)
 * [ ] Parsing Events
