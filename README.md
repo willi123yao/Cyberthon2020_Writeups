@@ -25,7 +25,7 @@ Written by: hci-1
 
 ### CSIT
 * [ ] Lost Magic
-* [ ] Heart Paint [done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#heart-paint)
+* [ ] Heart Paint ([done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#heart-paint))
 * [x] The ROPster
 * [ ] Unravelling DGA (done by 000verflow)
 * [x] From 8 to 5
@@ -33,6 +33,6 @@ Written by: hci-1
 
 ### Data Science
 * [ ] Find The Hacker ID ([done by EJC_RichardDominick](https://github.com/RichDom2185/Cyberthon-2020/blob/master/Data%20Science/FindTheHackerID.ipynb))
-* [ ] My New Language (done by [NYJC_Terence](https://github.com/Hackin7/Programming-Crappy-Solutions/tree/master/Cyber%20Security/Cyberthon%202020/Finals/Data%20Science/My%20New%20Language))
+* [ ] My New Language ([done by NYJC_Terence](https://github.com/Hackin7/Programming-Crappy-Solutions/tree/master/Cyber%20Security/Cyberthon%202020/Finals/Data%20Science/My%20New%20Language))
 * [ ] Spot The Malicious Users ([done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#spot-the-malicious-users))
 * [ ] Parsing Events
