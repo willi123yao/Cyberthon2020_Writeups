@@ -1,6 +1,6 @@
 ## From 8 to 5 Part 2
 
-As a clue in the challenge title "From 8 to 5", this is a Base32 encoding challenge. What Base32 encoding does is to encode every character of **8** bits to **5** bits. Hence, depending on the position of your plaintext **"Cyberthon{"**, you will get 5 possible outcomes. (*because gcd(5,8) = 5!*) 
+As a clue in the challenge title "From 8 to 5", this is a Base32 encoding challenge. What Base32 encoding does is to encode every character of **8** bits to **5** bits. Hence, depending on the position of your plaintext **"Cyberthon{"**, you will get 5 possible outcomes. (*because gcd(5,8) = 1!*) 
 
 ```
 b32.base32_encode('Cyberthon{') = rlkdcioa0pzbujsj
