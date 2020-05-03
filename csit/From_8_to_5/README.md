@@ -1,5 +1,7 @@
 # Cyberthon: CSIT
 
+# NOTE: Alternative writeup (by CSIT) can be found [here](From_8_to_5_Part_2.md)!
+
 ## From 8 to 5 [1800]
 
 _A malware was found on one of the ShoppingBaba's servers beaconing back to the cyberattackers' C2 at very regular intervals._
