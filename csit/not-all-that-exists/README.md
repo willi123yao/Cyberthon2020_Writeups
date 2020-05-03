@@ -167,7 +167,7 @@ ERROR kuhl_m_sekurlsa_acquireLSA ; Handle on memory (0x00000002)
 
 ### Getting the password
 
-Because my computer is quite slow (this seems unnecessary in retrospect) and my relative familiarity with the Linux CLI (despite running Windows), I decided to use [Colab](https://colab.research.google.com/drive/1UefhU0VRWHO_YxkFqZ5g-bJiHFX7XC2A) to do the hash cracking by following [this guide](https://gist.github.com/koenrh/801766782fe65b279b436576d935d5d3) _(kinda)_. The notebook is available [here](https://colab.research.google.com/drive/1UefhU0VRWHO_YxkFqZ5g-bJiHFX7XC2A).
+Because my computer is quite slow (this seems unnecessary in retrospect), I decided to use [Colab](https://colab.research.google.com/drive/1UefhU0VRWHO_YxkFqZ5g-bJiHFX7XC2A) to do the hash cracking by following [this guide](https://gist.github.com/koenrh/801766782fe65b279b436576d935d5d3) _(kinda)_.
 
 To start the process, ensure that a GPU session is selected. Then, download and extract the latest version of hashcat:
 
