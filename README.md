@@ -4,7 +4,7 @@ Written by: hci-1
 ### Network Security
 * [x] What was Leaked
 * [x] Baba Supplier's Chat
-* [ ] Text is the key
+* [x] Text is the key
 * [x] Macnificent Authentication
 * [x] Loosen That Ratchet
 * [x] Patience is Key Element of Success
