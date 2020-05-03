@@ -21,7 +21,7 @@ Written by: hci-1
 * [ ] Vote
 * [x] Search high and low, you should. Yeesssssss
 * [x] Caged Up
-* [ ] WikiShellFall
+* [x] WikiShellFall (somewhat incomplete)
 
 ### CSIT
 * [ ] Lost Magic
