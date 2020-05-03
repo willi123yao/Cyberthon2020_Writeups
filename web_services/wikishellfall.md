@@ -15,7 +15,7 @@ Firstly, to get the easy stuff out of the way:
 * Username: `Baba Ali` (from the frontpage: "This is the personal wiki of Baba Ali")
 * Password: `Ek6OaGHk8ZRP3.wI` (comment in the source code of the front page)
 
-### Surprised Shell
+### Bewildered Bash
 
 [This page](http://garage4hackers.com/showthread.php?t=6902) and [this page](https://www.netsparker.com/blog/web-security/cve-2014-6271-shellshock-bash-vulnerability-scan/) were almost basic Shellshock guides. If a request with any header with the contents of the Shellshock payload is sent, an arbitrary command can be run:
 
@@ -30,6 +30,12 @@ curl --user 'Baba Ali:Ek6OaGHk8ZRP3.wI' -A '() { :;}; echo "Flag:" $(/bin/bash -
 * `-v`: verbose. Makes `curl` print the headers
 
 The payload will be printed in the headers for an unknown reason. I believe that this is because there's a separator between the headers and the body being sent by CGI, but I'm not too sure. This writeup may be updated in the future with additional information. What this _means_, however, is that we must prepend "something: " in front of the output to make this a valid HTTP response header, so that Nginx doesn't freak out (you may get a `An error occurred while reading CGI reply (no response received)` error).
+
+_input from [@JakeIsMeh](https://github.com/JakeIsMeh):_
+This is only possible because the organizers moved their backend back to Bash. From the docs page:
+> 2019-08-18: Version 1.10 (latest)  
+> Changed the codebase from bash to POSIX sh.  No longer requires bash.
+In the modified `minisleep.cgi`, however, it still uses Bash.
 
 The output of an `ls` was odd, because each separator corresponded to a new HTTP header, leading to this weird result:
 
