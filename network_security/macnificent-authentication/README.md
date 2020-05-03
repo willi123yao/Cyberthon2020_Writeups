@@ -1,6 +1,7 @@
 # Macnificent Authentication
 
 ### Network Security // 665 Points // 0 Solves
+_This challenge was solved after Cyberthon ended._
 
 ## Description
 
