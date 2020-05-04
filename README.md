@@ -18,7 +18,7 @@ Written by: hci-1
 
 ### Web Services
 * [x] Baba-OAuth
-* [ ] Vote
+* [X] Vote
 * [x] Search high and low, you should. Yeesssssss
 * [x] Caged Up
 * [x] WikiShellFall (somewhat incomplete)
