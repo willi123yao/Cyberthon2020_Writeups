@@ -75,7 +75,7 @@ let decryptedBytes = aesCbc.decrypt(fs.readFileSync('lsass_enc.DMP'));
 fs.writeFileSync('out', decryptedBytes);
 ```
 
-<u>**Note:**</u> Powershell commands seem to output the contents of the stream incorrectly. Use JS like above or a python module such as [PyADS](https://github.com/RobinDavid/pyADS) to extract the content instead. [See [Python Version](extractStream.py) (split into 2 parts as 1 needs to be ran on Windows)]
+<u>**Note:**</u> Powershell commands seem to output the contents of the stream incorrectly. Use JS like above or a python module such as [PyADS](https://github.com/RobinDavid/pyADS) to extract the content instead. [See [extractStream.py](extractStream.py) and [decryptDump.py](decryptDump.py) for Python. Split into 2 parts as extractStream needs to be ran on Windows]
 
 This creates a file `out` that _should_ be the LSASS dump. We can verify this by using mimikats (disable your antivirus) by following [this guide](https://medium.com/@markmotig/some-ways-to-dump-lsass-exe-c4a75fdc49bf#2854):
 
