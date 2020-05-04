@@ -45,7 +45,9 @@ Length        : 32
 yŒù'ÕH˜ZšVqXw•‘ZœOÙÓ
 ```
 
-Obviously, we can't use the string given. However, we can take note of a few features that lead us to the cipher used (other than getting hint #2):
+The name `encryption_params` suggests that this stream contains information about the encryption (i.e the **key**)
+
+Obviously, we can't use the string given to decrypt the file. However, we can take note of a few features that lead us to the cipher used (*other than getting hint #2*):
 
 * It's probably AES, because AES is holy
 * The `encryption_params` ADS is 32 bytes long. Subtracting a 16 byte Initialization Vector (IV) from this, we know that this is a 16 byte key, which corresponds to AES-128
@@ -72,6 +74,8 @@ let decryptedBytes = aesCbc.decrypt(fs.readFileSync('lsass_enc.DMP'));
 
 fs.writeFileSync('out', decryptedBytes);
 ```
+
+<u>**Note:**</u> Powershell commands seem to output the contents of the stream incorrectly. Use JS like above or a python module such as [PyADS](https://github.com/RobinDavid/pyADS) to extract the content instead. [See [Python Version](extractStream.py) (split into 2 parts as 1 needs to be ran on Windows)]
 
 This creates a file `out` that _should_ be the LSASS dump. We can verify this by using mimikats (disable your antivirus) by following [this guide](https://medium.com/@markmotig/some-ways-to-dump-lsass-exe-c4a75fdc49bf#2854):
 
