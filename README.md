@@ -24,7 +24,7 @@ Written by: hci-1
 * [x] WikiShellFall (somewhat incomplete)
 
 ### CSIT
-* [ ] Lost Magic
+* [X] Lost Magic
 * [ ] Heart Paint ([done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#heart-paint))
 * [x] The ROPster
 * [ ] Unravelling DGA ([done by 000verflow](https://cdn.discordapp.com/attachments/706068116324614144/706141518590640178/Unravelling_DGA.pdf))
