@@ -1,4 +1,3 @@
-from Crypto.Cipher import AES
 from pyads import ADS
 
 handler = ADS("lsass_enc.DMP")
