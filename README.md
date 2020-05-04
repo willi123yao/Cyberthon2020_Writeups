@@ -14,17 +14,17 @@ Written by: hci-1
 * [x] Simple Cipher
 * [ ] Find The Answers
 * [ ] Meow ([done by HCI_Zheng Jun](https://cdn.discordapp.com/attachments/706068116324614144/706149649567711252/Meow.pdf))
-* [ ] Reverse(Faze)
+* [x] Reverse(Faze)
 
 ### Web Services
 * [x] Baba-OAuth
-* [ ] Vote
+* [X] Vote
 * [x] Search high and low, you should. Yeesssssss
 * [x] Caged Up
 * [x] WikiShellFall (somewhat incomplete)
 
 ### CSIT
-* [ ] Lost Magic
+* [X] Lost Magic
 * [ ] Heart Paint ([done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#heart-paint))
 * [x] The ROPster
 * [ ] Unravelling DGA ([done by 000verflow](https://cdn.discordapp.com/attachments/706068116324614144/706141518590640178/Unravelling_DGA.pdf))
