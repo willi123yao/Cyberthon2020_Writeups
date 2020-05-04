@@ -26,7 +26,7 @@ curl --user 'Baba Ali:Ek6OaGHk8ZRP3.wI' -A '() { :;}; echo "Flag:" $(/bin/bash -
 * `--user 'Baba Ali:Ek6OaGHk8ZRP3.wI'`: sets the authentication, since auth is handled by Nginx (i.e. CGI won't be run if Nginx doesn't allow it to)
 * `-A '() { :;}; echo "Flag:" $(/bin/bash -c "cat flag")'`: sets the user agent (an HTTP header) to the Shellshock payload
 	* The payload returns (in a header) the output of the command in the brackets, formatted properly
-	* `/bin/bash -c` executes the following command. For some reason, just using `$()` results in `An error occurred while parsing CGI reply` being replied. Further investigations are needed. `/bin/sh` works as well.
+	* `/bin/bash -c` executes the following command. _For some reason,_ a full path must be given to the first command (`/bin/bash`); just using `$(cat flag)` results in `An error occurred while parsing CGI reply` being replied. `/bin/sh -c "cat ..."` or `/bin/cat` will work as well.
 * `-v`: verbose. Makes `curl` print the headers
 
 The payload will be printed in the headers for an unknown reason. I believe that this is because there's a separator between the headers and the body being sent by CGI, but I'm not too sure. This writeup may be updated in the future with additional information. What this _means_, however, is that we must prepend "something: " in front of the output to make this a valid HTTP response header, so that Nginx doesn't freak out (you may get a `An error occurred while reading CGI reply (no response received)` error).
@@ -96,5 +96,5 @@ Oh are there many.
 1. If everyone is exploiting Shellshock through the User Agent, don't look into how the CGI script works
 2. Point 1, except when it's obvious that there aren't any environment variables to exploit anyways, obviously
 3. Don't give up if something doesn't work on the first try (we did 1, because we didn't know we had to format the response as a header in the beginning)
-4. High point challenges can actually have simple solutions as well (we did not expect the password to be in a commend for a looong while)
+4. High point challenges can actually have simple solutions as well (we did not expect the password to be in a comment for a looong while)
 5. ~~Firefox is surprisingly good at things it's not meant for~~
