@@ -14,7 +14,7 @@ Written by: hci-1
 * [x] Simple Cipher
 * [ ] Find The Answers
 * [ ] Meow ([done by HCI_Zheng Jun](https://cdn.discordapp.com/attachments/706068116324614144/706149649567711252/Meow.pdf))
-* [ ] Reverse(Faze)
+* [x] Reverse(Faze)
 
 ### Web Services
 * [x] Baba-OAuth
