@@ -9,11 +9,21 @@ The challenge gave us a pcap traffic capture of some traffic, with the hints pro
 
 Opening up wireshark and sorting the packets by length, we see that there is a `/upload.php ` endpoint with considerable amounts of data going through.
 
-The capture included a multipart/form-data, which means it had multiple files arranged by their file names. We see that the largest one has a data.7z.002 file, and it is a part of a larger file from the other 2 post requests to `upload.php` endpoint. 
+The capture included a multipart/form-data, which means it had **multiple files arranged by their file names**. We see that the largest one has a data.7z.002 file, and it is a part of a larger file from the other 2 post requests to `upload.php` endpoint which contain `data.7z.001` and `data.7z.003`.
 
-Conbining these hex data together into one file from the three files (`data.7z.001`, `data.7z.002` and `data.7z.003`), we realise that we still need a password to open these file up. The password could be found in the `/upload.php` endpoint as well, so we just need to copy the plaintext password in order to extract the document.
+![](1.jpg)
 
-However, it did not just end so easily. Opening up the extracted file gave us a text file with the lorem ipsum placeholder text, but this can be simply resolved by searching the file for the flag header, which we then obtain the final flag.
+Conbining these hex data together into one file from the three files (`data.7z.001`, `data.7z.002` and `data.7z.003`), we obtain a 7zip file. However, a password is required for extraction. Luckily for us, the password could be found being uploaded to the `/upload.php` endpoint with a `name="password"`  a couple of streams down (`4H%XND63TsXJo#cFMx^kL`). 
+
+![](2.jpg)
+
+Opening up the extracted file gave us a text file with the lorem ipsum placeholder text, but this can be simply resolved by searching the file for the flag header, which we then obtain the final flag.
+
+```
+Cyberthon{D4t48r3@ch!!11!one}
+```
+
+
 
 ### Key takeaways
 - Don't be mislead by the other data in the capture as the challenge clearly stated it was in unencrypted traffic and therefore it is just http
