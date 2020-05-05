@@ -1,5 +1,5 @@
 ## What was leaked
-#### Network Security
+#### Network Security // 130 Points // 13 Solves
 
 ### Challenge description
 The attacker zipped large amounts of data into a .7z file and posted them offsite through an unsecured connection to a file sharing site. We managed to collect the packets and the password he sent, find out what whas leaked!
