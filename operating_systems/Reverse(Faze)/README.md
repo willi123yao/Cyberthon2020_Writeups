@@ -40,7 +40,7 @@ After passing the three functions, you'll be able to find the ssh credentials (`
 
 ![image-20200504204921301](image-20200504204921301.png)
 
-Now, that password in the box **isn't actually correct**. I never figured out why PEDA got the password wrong, but you can correct it manually by inspecting `faze2()` & querying `IDAPython` for what the correct value _should_ be:
+Now, that password in the box **isn't actually correct**, because the 2nd line should have a payload of '\x01\x01\x01\x01\x0F'. I didn't realise that during the competition, and I just corrected it manually by inspecting `faze2()` & querying `IDAPython` for what the correct value _should_ be:
 
 ![image-20200504205815633](image-20200504205815633.png)
 
