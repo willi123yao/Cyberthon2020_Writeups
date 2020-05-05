@@ -31,9 +31,10 @@ Anyway, `from8to5_traffic_responses.txt` is a long, _long_ list of similar strin
 
 <p align="center">
 <img src="image-20200502202842365.png">
+<br>
+<i>If you didn't catch the hint; they're modified-base32</i>
 </p>
 
-<center><i>If you didn't catch the hint; they're modified-base32</i></center>
 
 Stuck in the middle of all of that is a single bit of known-plaintext: 
 
@@ -62,6 +63,7 @@ For one, you'll notice that the plaintext isn't quite correct: I stole the `ty17
 
 <p align="center">
 <img src="image-20200502205236477.png">
+<br>
 <i><b>AN</b>: This doesn't actually affect anything.</i>
 </p>
 
@@ -119,6 +121,7 @@ It then occurred to me that I should've started with the one thing I'm good at: 
 
 <p align="center">
 <img src="image-20200502212723326.png">
+<br>
 <i>Usually</i> C++ decompilation is hell. <i>Usually</i>.
 </p>
 

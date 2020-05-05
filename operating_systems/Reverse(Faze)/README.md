@@ -12,6 +12,7 @@ _Please help to find the credentials left behind inside the binary executable an
 
 <p align="center">
 <img src="image-20200504182636905.png">
+<br>
 <i>Regex is a dour to the eyes, sometimes.</i>
 </p>
 
