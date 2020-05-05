@@ -15,11 +15,11 @@ After opening the pcap file, we are greeting with some orders in sequential orde
 
 However, even after doing so there isn't any valuable information that we can get out from here as everything seems to be encrypted. Or so I thought...
 
-Since this challenge involves encryption, we will first think of the length of the encrypted ciphertext. Sorting the packets by length reveals something special as shown, the HTTP data is actually in plaintext!
+Since this challenge involves encryption, we will first think of the length of the encrypted ciphertext. Sorting the packets by length reveals something special as shown, the smallest HTTP data is actually in **plaintext**!
 
 ![Interesting find](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/network_security/loosen_that_ratchet/image-2.png)
 
-This shows that the current packet (order 1041) is the initial packet from the client, and sends back the AES key and IV for use in the `Next-ID` order.
+This shows that the current packet (order 1041) is the initial packet from the client, and sends back the AES key and IV to decrypt the `Next-ID` order packet.
 
 The key is 16 bytes, and thus indicate that it is an AES-128-CBC cipher (you can guess the mode of operation by guess and check using the next order, 303, and it turns out to be CBC)
 
@@ -80,7 +80,9 @@ for (let i=1; i<LEN; i++) {
 ```
 (Do note that my script prints out all the messages, so it can get quite spammy in the console, but this can be fixed easily with a few line changes)
 
+[See [Python Version](extractor.py)]
+
 ### Footnotes
 - This challenge actually is a crypto challenge, and combining it with forensics makes this challenge good and interesting.
 - However, some coding is actually required as there is no sane person that will manually decrypt 2020 orders (would you even be able to find the flag before the competition ends?)
-- It seems very daunting and hard at first, but as a forensics challenge there should be some digging around trying to look for clues to get started.
+- It seems very daunting and hard at first, but as a forensics challenge there should be some digging around trying to look for clues to get started. ***Leave no stone unturned***
