@@ -52,7 +52,7 @@ After passing the three functions, you'll be able to find the ssh credentials (`
 <img src="image-20200504204921301.png">
 </p>
 
-Now, that password in the box **isn't actually correct**, because the 2nd line should have a payload of '\x01\x01\x01\x01\x0F'. I didn't realise that during the competition, and I just corrected it manually by inspecting `faze2()` & querying `IDAPython` for what the correct value _should_ be:
+Now, that password in the box **isn't actually correct**, because the 2nd line should have a payload of `'\x01\x01\x01\x01\x0F'`. I didn't realise that during the competition, and I just corrected it manually by inspecting `faze2()` & querying `IDAPython` for what the correct value _should_ be:
 
 <p align="center">
 <img src="image-20200504205815633.png">
