@@ -28,7 +28,7 @@ And if you give an input that's long enough (`0x80`), you'll see the Windows equ
 
 ![image-20200502182024737](image-20200502182024737.png)
 
-We now know that the binary requires a buffer overflow through `argv`^1^. Where do we go from here?
+We now know that the binary requires a buffer overflow through `argv`<sup>1</sup>. Where do we go from here?
 
 #### Interactive Disassembly
 
@@ -68,7 +68,7 @@ Incidentally, this makes the challenge a simple `ret2text`, rather than a full-b
 
 #### Code
 
-This payload will not work for `argv` input.^2^
+This payload will not work for `argv` input.<sup>2</sup>
 
 ```python
 from pwn import *
