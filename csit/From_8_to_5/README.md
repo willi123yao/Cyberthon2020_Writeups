@@ -29,13 +29,17 @@ Remember that `code.org` ciphertext you did in the Livestream training session? 
 
 Anyway, `from8to5_traffic_responses.txt` is a long, _long_ list of similar strings of equal length:
 
-![image-20200502202842365](image-20200502202842365.png)
+<p align="center">
+<img src="image-20200502202842365.png">
+</p>
 
 <center><i>If you didn't catch the hint; they're modified-base32</i></center>
 
 Stuck in the middle of all of that is a single bit of known-plaintext: 
 
-![image-20200502203457609](image-20200502203457609.png)
+<p align="center">
+<img src="image-20200502203457609.png">
+</p>
 
 As from the challenge description, we must find some way to obtain the unknown base32 key to decrypt `malware.zip`. Using the plaintext as a crib, we can piece together the proprietary base32 key with an algorithm like so:
 
@@ -56,9 +60,11 @@ If you follow that algorithm, you'll eventually get a key looking something like
 
 For one, you'll notice that the plaintext isn't quite correct: I stole the `ty17...` above from the encoded line _directly above_ the line containing `ID:csit`, and the correct plaintext would actually have `ID:csis`:
 
-![image-20200502205236477](image-20200502205236477.png)
+<p align="center">
+<img src="image-20200502205236477.png">
+<i><b>AN</b>: This doesn't actually affect anything.</i>
+</p>
 
-<center><i><b>AN</b>: This doesn't actually affect anything.</i></center>
 
 Additionally, the encoded text we chose is missing a few characters, namely `u` and `g`. Although there are smarter ways to accomplish this, I just bruteforced the last character:
 
@@ -101,7 +107,9 @@ Following that, I took a gander at `tcpdump`, and tried to look through `port ht
 
 For reasons unbeknownst to me, all of the TCP streams in the trace turned up blank.
 
-![image-20200502211533579](image-20200502211533579.png)
+<p align="center">
+<img src="image-20200502211533579.png">
+</p>
 
 I moved on.
 
@@ -109,11 +117,13 @@ I moved on.
 
 It then occurred to me that I should've started with the one thing I'm good at: poking at stuff with IDA Pro
 
-![image-20200502212723326](image-20200502212723326.png)
+<p align="center">
+<img src="image-20200502212723326.png">
+<i>Usually</i> C++ decompilation is hell. <i>Usually</i>.
+</p>
 
-<center><i>Usually</i> C++ decompilation is hell. <i>Usually</i>.</center>
 
-Even if you don't know exactly what the output above means, it's enough to know that the binary does no special parsing of webserver url. Ergo, we can simulate `./malware` using basic command-line tools^1^.
+Even if you don't know exactly what the output above means, it's enough to know that the binary does no special parsing of webserver url. Ergo, we can simulate `./malware` using basic command-line tools<sup>1</sup>.
 
 We can run `curl` for about five minutes (as in the directive), and parse the output later on.
 
