@@ -15,7 +15,7 @@ After opening the pcap file, we are greeting with some orders in sequential orde
 
 However, even after doing so there isn't any valuable information that we can get out from here as everything seems to be encrypted. Or so I thought...
 
-Since this challenge involves encryption, we will first think of the length of the encrypted ciphertext. Sorting the packets by length reveals something special as shown, the smallest HTTP data is actually in **plaintext**!
+Since this challenge involves encryption, we will first think of the length of the encrypted ciphertext. Sorting the packets by length reveals something special as shown, the smallest HTTP packet is actually in **plaintext**!
 
 ![Interesting find](https://raw.githubusercontent.com/willi123yao/Cyberthon2020_Writeups/master/network_security/loosen_that_ratchet/image-2.png)
 
