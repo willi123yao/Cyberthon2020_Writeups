@@ -12,7 +12,7 @@ Written by: hci-1
 ### Operating Systems
 * [x] Treasure Hunt
 * [x] Simple Cipher
-* [ ] Find The Answers ([done by HCI_Zheng Jun](https://cdn.discordapp.com/attachments/706068116324614144/706886532073521172/FTA_Updated.pdf))
+* [x] Find The Answers ([also done by HCI_Zheng Jun](https://cdn.discordapp.com/attachments/706068116324614144/706886532073521172/FTA_Updated.pdf))
 * [ ] Meow ([done by HCI_Zheng Jun](https://cdn.discordapp.com/attachments/706068116324614144/706149649567711252/Meow.pdf))
 * [x] Reverse(Faze)
 
