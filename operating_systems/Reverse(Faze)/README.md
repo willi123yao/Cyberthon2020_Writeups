@@ -2,6 +2,8 @@
 
 ## Reverse(Faze) [1000]
 
+[中文版](https://github.com/willi123yao/Cyberthon2020_Writeups/blob/master/operating_systems/Reverse(Faze)/h1.md)
+
 _The hacker left a binary executable behind in ShoppingBaba's server as a way to connect back to their C2 server's ssh service at p7ju6oidw6ayykt9zeglwyxired60yct.ctf.sg:16382_
 
 _Please help to find the credentials left behind inside the binary executable and find the flag on the hacker's server!_
