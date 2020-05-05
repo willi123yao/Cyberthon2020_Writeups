@@ -22,11 +22,15 @@ So. We'll start off straight by running the bare exe: ![image-20200502175541137]
 
 `stdin` is clearly unavailable, so the only alternate source of input must be `argv`:
 
-![image-20200502180000870](image-20200502180000870.png)
+<p align="center">
+<img src="image-20200502180000870.png">
+</p>
 
 And if you give an input that's long enough (`0x80`), you'll see the Windows equivalent of a segfault:
 
-![image-20200502182024737](image-20200502182024737.png)
+<p align="center">
+<img src="image-20200502182024737.png">
+</p>
 
 We now know that the binary requires a buffer overflow through `argv`<sup>1</sup>. Where do we go from here?
 
@@ -36,17 +40,23 @@ The decompiled output for `Ropster.exe` is pretty terrible by default. IDA Pro c
 
 To find a reference to `argv`, we'll search for the string that's printed along with it, `"ROPSTER:"`:
 
-![image-20200502183255416](image-20200502183255416.png)
+<p align="center">
+<img src="image-20200502183255416.png">
+</p>
 
 We can make a couple of deductions.
 
 * `sub_4040133BB` is essentially `printf()`, taking in `argv` from `v2`. At the start of the function definition, `v2` is located at `[ebp-80h]`, so the buffer takes in 0x80 chars of input before Bad Stuff happens, as empirically found earlier on.
 
-![image-20200502183637982](image-20200502183637982.png)
+<p align="center">
+<img src="image-20200502183637982.png">
+</p>
 
 * The variable `g41f` is probably an actual flag on server-side. This tells us where we need to jump:
 
-![image-20200502184548512](image-20200502184548512.png)
+<p align="center">
+<img src="image-20200502184548512.png">
+</p>
 
 So if we model the stack something like,
 
@@ -58,7 +68,9 @@ So if we model the stack something like,
 
 We'll get the flag printed immediately.
 
-![image-20200502185540288](image-20200502185540288.png)
+<p align="center">
+<img src="image-20200502185540288.png">
+</p>
 
 Incidentally, this makes the challenge a simple `ret2text`, rather than a full-blown exercise in ROP. Perhaps an unintended solution?
 
