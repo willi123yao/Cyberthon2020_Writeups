@@ -42,6 +42,7 @@ My team was rather stuffed for time during the competition, and the binary was s
 
 <p align="center">
 <img src="image-20200504204338430.png">
+<br>
 <b>AN:</b> <i>Non-linebuffered challenges are really, really irksome</i>
 </p>
 
