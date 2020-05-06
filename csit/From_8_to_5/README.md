@@ -160,6 +160,23 @@ ID:205; USERNAME:S.BaBa-Server\User-Profiles; MESSAGE:Cyberthon{cmd:send--"/etc/
 
 `Cyberthon{cmd:send--"/etc/passwd","/etc/shadow";op_time:0800-1700;}`
 
+## Code (`decode.py`)
+
+```python
+from Base32 import *
+ENCODE = 'ty17zxjslyisdr1whl1wcsa5tw1szzi0rt3zcxtlhlaqcmsy0t0yhkjy0rdw6ksvnizdxiosen3cfphshl6z0ptfryjd1fozlyqb0r77lmddfxo0n3q16w1ttw1szntwe6isrniabzisa999'
+DECODE = 'ID:csis; USERNAME:S.BaBa-Server\User-Profiles; MESSAGE:Awaiting command. TIME:1583432539'
+key = list('QWERTYUIOPASDFGHJKLZXCVBNM,./;<>')
+for i in range(len(ENCODE)):
+    output = Base32(''.join(key), '9').base32_encode(DECODE)
+    if output[i] != ENCODE[i]: key[key.index(output[i])] = ENCODE[i]
+print('proposed key: %s' % ''.join(key))
+key = '6517cyberthonl0v3paszwdqxifjkmug' #replace with correct key
+b32 = Base32(key, '=')
+with open('output.curl') as f:
+    for l in f.readlines(): print(b32.base32_decode(l))
+```
+
 ## Footnotes
 
 1. I am well-aware this is not the intended solution. `snort` is difficult.
