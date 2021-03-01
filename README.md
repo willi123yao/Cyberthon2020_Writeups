@@ -33,6 +33,6 @@ Written by: hci-1
 
 ### Data Science
 * [ ] Find The Hacker ID ([done by EJC_RichardDominick](https://github.com/RichDom2185/Cyberthon-2020/blob/master/Data%20Science/FindTheHackerID.ipynb))
-* [ ] My New Language ([done by NYJC_Terence](https://github.com/Hackin7/Programming-Crappy-Solutions/tree/master/Cyber%20Security/Cyberthon%202020/Finals/Data%20Science/My%20New%20Language))
+* [ ] My New Language ([done by NYJC_Terence](https://github.com/Hackin7/Programming-Crappy-Solutions/tree/master/Cyber%20Security/Capture%20the%20Flag%20Competitions/2020/Cyberthon%202020/Finals/Data%20Science/My%20New%20Language))
 * [ ] Spot The Malicious Users ([done by ACSI_Jonathan](https://jloh02.github.io/ctf/cyberthon-2020#spot-the-malicious-users))
 * [ ] Parsing Events ([Python file available here](https://cdn.discordapp.com/attachments/706068116324614144/706085061211979797/test.py))
